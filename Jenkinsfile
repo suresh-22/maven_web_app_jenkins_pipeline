@@ -6,8 +6,7 @@ pipeline{
     stages{
        stage('GetCode'){
             steps{
-				git branch: 'main',
-                url: 'https://github.com/suresh-22/maven_web_app_jenkins_pipeline.git'
+		  git branch: 'main', credentialsId: 'pipeline', url: 'https://github.com/suresh-22/maven_web_app_jenkins_pipeline.git'
             }
          }        
        stage('Build'){
